@@ -1,0 +1,5 @@
+# Backend Next.js ignores
+node_modules/
+.next/
+/.env.local
+.env

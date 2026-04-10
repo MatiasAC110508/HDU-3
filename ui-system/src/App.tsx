@@ -1,5 +1,6 @@
 import { Button } from './components/Button';
 import { Card } from './components/Card';
+import { ApiCard } from './components/ApiCard';
 import { CheckCircle, AlertTriangle, ArrowRight, Zap } from 'lucide-react';
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
           <h1 className="text-3xl font-bold text-gray-900">Sistema de Componentes UI</h1>
           <p className="text-gray-500 mt-2">Ejemplo de integración de Button, Badge y Card tipados con TypeScript.</p>
         </header>
+
+        {/* The middle card will display backend status via ApiCard (keeps output inside the card). */}
 
         {/* Listado de Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -49,7 +52,8 @@ function App() {
               </div>
             }
           >
-            <p>El clúster principal está experimentando una carga inusual. Se requiere una intervención inmediata por parte del equipo DevOps.</p>
+            {/* Show API-driven status inside the card so there is no external error box */}
+            <ApiCard />
           </Card>
 
           {/* Card 3: Tipo Green con íconos personalizados */}
